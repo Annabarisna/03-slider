@@ -17,6 +17,15 @@ downButton.addEventListener('click', () => {
     chadeSlide('down');
 });
 
+document.addEventListener('keydown', 
+    event => {
+        if (event.key === 'ArrowUp'){
+            chadeSlide('up')
+        } else if (event.key === 'ArrowDown'){
+            chadeSlide('down')
+        }
+    })
+
 function chadeSlide (direction) {
     if (direction === 'up') {
         activeSlideIndex++
